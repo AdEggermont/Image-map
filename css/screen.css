@@ -1,0 +1,127 @@
+/*
+	Reset
+*/
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section { display: block; }
+body, form, ol, ul, dl, li, dt, dd, td, th ,tr, h1, h2, h3, h4, h5, h6, p, pre, blockquote, address, figure { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+img { border:0; }
+fieldset { margin: 0; padding: 0; border: 0; }
+input, select, textarea { font-size: 100%; vertical-align: middle; }
+table { border-collapse: collapse; border-spacing: 0; empty-cells: show; }
+th { text-align: left; }
+a:focus { overflow: hidden; }
+
+
+/*
+	General
+*/
+
+body {
+	color: #505050;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+h4 {
+	color: #ADB8BF;
+	font-size: 14px;
+	padding: 0 0 10px;
+}
+
+p {
+	padding: 0 0 12px 0;
+}
+
+#container {
+	width: 752px;
+	margin: 150px auto 0;
+}
+
+/*
+	Image map
+*/
+
+.imageMapContainer {
+	position: relative;
+	width: 750px;
+	height: 464px;
+	border: 1px solid #FFF;
+	-webkit-box-shadow: 0 0 0 1px #999;
+	   -moz-box-shadow: 0 0 0 1px #999;
+	        box-shadow: 0 0 0 1px #999;
+}
+
+	.imageMap {
+		position: absolute;
+		width: 750px;
+		height: 464;
+	}
+
+		.imageMapContainer .marker {
+			position: absolute;
+			margin-left: -10px;
+			margin-top: -10px;
+			z-index: 8888;
+		}
+
+			.imageMapContainer .marker .bullet {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+				background: url('../images/bullet_imagemap.png') no-repeat;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			.imageMapContainer .marker .bullet:hover {
+				background-position: 0 -20px;
+			}
+
+			.imageMapContainer .marker .info {
+				position: absolute;
+				width: 226px;
+				top: -15px;
+				left: 30px;
+				background: #FFF;
+				display: none;
+				border: 1px solid #dcdcdc;
+				background: #f5f5f5 url('../images/glow.png') repeat-x 0 -1px;
+				-webkit-border-radius: 3px;
+				   -moz-border-radius: 3px;
+				        border-radius: 5px;
+				font-size: 12px;
+				padding: 12px 12px 0 12px;
+				-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+				   -moz-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+				        box-shadow: 0 0 3px rgba(0,0,0,0.5);
+			}
+
+			.imageMapContainer .marker .info:after {
+				content: "";
+				width: 9px;
+				height: 17px;
+				position:absolute;
+				top: 15px;
+				left: -9px;
+				background: url('../images/arrow_imagemap.png') no-repeat;
+			}
+
+			/* Left marker */
+
+			.imageMapContainer .markerLeft .info {
+				left: -260px;
+			}
+
+			.imageMapContainer .markerLeft .info:after {
+				left: 250px;
+				background-position: -9px 0;
+			}
+
+			.imageMapContainer .markerTop .info:after {
+				top: auto;
+				bottom: 10px;
+			}
